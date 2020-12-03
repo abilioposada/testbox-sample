@@ -34,5 +34,7 @@ jobs:
       # Runs
       - name: Run install
         run: |
-          box install && box server start
+          box install
+          box dotenv populate --new
+          box server start
           box testbox run
